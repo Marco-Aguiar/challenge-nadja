@@ -16,7 +16,7 @@ public class Client {
     private Integer id;
 
     @Column(name = "first_name", nullable = false, length = 250)
-    @NotNull(message = "O primeiro nome é obrigatório")
+    @NotNull(message = "First name is required")
     @Schema(description = "The client's first name", example = "John", required = true)
     private String firstName;
 
@@ -25,8 +25,8 @@ public class Client {
     private String lastName;
 
     @Column(name = "email", nullable = false, length = 250)
-    @Email(message = "Email inválido")
-    @NotNull(message = "O email é obrigatório")
+    @Email(message = "Invalid email")
+    @NotNull(message = "Email is required")
     @Schema(description = "The client's email address", example = "john.doe@example.com", required = true)
     private String email;
 
