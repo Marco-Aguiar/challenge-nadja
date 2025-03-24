@@ -18,6 +18,11 @@ public class ClientService {
         return clientRepository.save(client);
     }
 
+    public boolean doesClientExist(Integer clientId) {
+        return clientRepository.existsById(clientId);
+    }
+
+
     public List<Client> getAllClients() {
         return clientRepository.findAll();
     }
